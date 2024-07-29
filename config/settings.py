@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 'django.contrib.sessions',
 'django.contrib.messages',
 'django.contrib.staticfiles',
+'django.contrib.sites',
 
 # Third-party
 'crispy_forms',
@@ -56,7 +57,7 @@ INSTALLED_APPS = [
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-SITE_ID = 1
+SITE_ID = 2
 AUTHENTICATION_BACKEND = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -160,3 +161,10 @@ STATICFILES_FINDERS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "kakkarsagar03@gmail.com"
+EMAIL_HOST_PASSWORD = "okgl pzpf jbdt rywm"
